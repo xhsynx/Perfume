@@ -1,0 +1,24 @@
+﻿
+@model IEnumerable<Perfume.Models.PerfumeModel>
+@{
+    ViewData["Title"] = "Home Perfume";
+}
+
+<div class="text-center">
+    @foreach (var perfume in Model)
+    {
+        <div class="card bg-gradient text-black" style="width: 25rem;height:40rem;">
+            <img class="card-img-top w-100 h-50" src=@perfume.ImageUrl alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">@perfume.Name</h5>
+                <p class="card-text">@perfume.Description</p>
+            </div>
+            <div class="card-body">
+                <a href="#" class="card-link">@perfume.Currency@perfume.Price</a>
+                <button class="btn"><i class="fa fa-home"></i></button>
+                <a href="#" class="btn btn-primary">Button</a>
+            </div>
+        </div>
+    }
+
+</div>
